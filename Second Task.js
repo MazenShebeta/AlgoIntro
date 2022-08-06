@@ -9,26 +9,34 @@ var set1 = [3, 1, 7, 9];
 var set2 = [2, 4, 1, 9, 3];
 var sum = 0;
 
-for (var i = 0; i < set1.length; i++) {
-    for (var j = 0; j < set2.length; j++) {
-        if (set1[i] == set2[j]) {
-            break;
-        }
-        else if (j == set2.length-1) {
-            sum += set1[i];
-        }
-    }
-}
+var arr3 = set1.filter(function(obj){
+    return set2.indexOf(obj) == -1;
+})
+var arr4 = set2.filter(function(obj){
+    return set1.indexOf(obj) == -1;
+})
 
-for (var i = 0; i < set2.length; i++) {
-    for (var j = 0; j < set1.length; j++) {
-        if (set2[i] == set1[j]) {
-            break;
-        }
-        else if (j == set1.length-1) {
-            sum += set2[i];
-        }
-    }
-}
 
-console.log(sum);
+// for (var i = 0; i < set1.length; i++) {
+//     for (var j = 0; j < set2.length; j++) {
+//         if (set1[i] == set2[j]) {
+//             break;
+//         }
+//         else if (j == set2.length-1) {
+//             sum += set1[i];
+//         }
+//     }
+// }
+
+// for (var i = 0; i < set2.length; i++) {
+//     for (var j = 0; j < set1.length; j++) {
+//         if (set2[i] == set1[j]) {
+//             break;
+//         }
+//         else if (j == set1.length-1) {
+//             sum += set2[i];
+//         }
+//     }
+// }
+
+console.log();
