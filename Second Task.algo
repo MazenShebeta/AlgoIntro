@@ -1,0 +1,28 @@
+ALGORITHM SumOfDistinct
+VAR
+    set1: ARRAY_OF_INTEGER[4];
+    set2: ARRAY_OF_INTEGER[5];
+BEGIN
+    set1 = [3, 1, 7, 9];
+    set2 = [2, 4, 1, 9, 3];
+    sum = 0;
+    FOR i FROM 0 TO set1.length STEP step  DO
+        FOR j FROM 0 TO set2.length STEP step  DO
+            IF (set1[i] == set2[j] ) THEN
+                break;
+            END_IF
+            ELSE_IF (j == set2.length-1) THEN
+                sum += set1[i];
+        END_FOR
+    END_FOR
+
+    FOR i FROM 0 TO set2.length STEP step  DO
+        FOR j FROM 0 TO set1.length STEP step  DO
+            IF (set2[i] == set1[j] ) THEN
+                break;
+            END_IF
+            ELSE_IF (j == set1.length-1) THEN
+                sum += set1[i];
+        END_FOR
+    END_FOR
+END

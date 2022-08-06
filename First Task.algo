@@ -1,0 +1,17 @@
+ALGORITHM WORD_COUNT
+VAR
+    word_counter, vowel_counter := 0;
+    str : STRING[] := "Hello World.";
+BEGIN
+    str.LowerCase;
+    FOR i FROM 0 TO str.length-1 STEP step  DO
+        IF (str[i] == ' ') THEN
+            word_counter++;
+        END_IF
+        ELSE_IF (str[i] == 'a'or str[i] == 'e'or str[i] == 'i'or str[i] == 'o'or str[i] == 'u'or str[i] == 'y') THEN
+            vowel_counter++;
+        ELSE_IF (str[i] == '.')
+            BREAK;
+        END_IF
+    END_FOR
+END
